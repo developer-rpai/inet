@@ -86,19 +86,4 @@ void Radio::initialize(int stage)
     }
 }
 
-void Radio::initializeRadioMode()
-{
-    const char *initialRadioMode = par("initialRadioMode");
-    if (!strcmp(initialRadioMode, "off"))
-        completeRadioModeSwitch(IRadio::RADIO_MODE_OFF);
-    else if (!strcmp(initialRadioMode, "sleep"))
-        completeRadioModeSwitch(IRadio::RADIO_MODE_SLEEP);
-    else if (!strcmp(initialRadioMode, "receiver"))
-        completeRadioModeSwitch(IRadio::RADIO_MODE_RECEIVER);
-    else if (!strcmp(initialRadioMode, "transmitter"))
-        completeRadioModeSwitch(IRadio::RADIO_MODE_TRANSMITTER);
-    else if (!strcmp(initialRadioMode, "transceiver"))
-        completeRadioModeSwitch(IRadio::RADIO_MODE_TRANSCEIVER);
-    else
-        throw cRuntimeError("Unknown initialRadioMode");
-}
+PLACEHOLDER_REST
